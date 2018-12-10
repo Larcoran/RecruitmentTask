@@ -94,5 +94,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JBATaskCode\JBATaskCode.csproj">
+      <Project>{d3def73c-ab8e-4ccb-ac8c-9c1185dc9bbe}</Project>
+      <Name>JBATaskCode</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

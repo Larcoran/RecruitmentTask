@@ -5,8 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JBATask"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Create database table from file" Height="600" Width="450" MinHeight="210" MinWidth="280">
+    <StackPanel>
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="Please enter DB connection string without quotes:" Margin="5" />
+            <TextBox Name="DBConnectionString" MinWidth="350" MaxWidth="350" Margin="5" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Name="BTNSelectFile" Content="Select file" HorizontalAlignment="Left" Margin="5,5,0,0" Click="BTNSelectFile_Click"/>
+            <Button Name="BTNCreteDBTable" Content="Create database table" HorizontalAlignment="Left" Margin="5,5,0,0" Click="BTNCreteDBTable_Click"/>
+        </StackPanel>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Timer:" AllowDrop="True" Margin="5" VerticalAlignment="Center" />
+                <Label Name="minLBL" Content="00" />
+                <Label Content=":" />
+                <Label Name="secLBL" Content="00" />
+
+                <TextBlock Name="TBSuccess" HorizontalAlignment="Center" VerticalAlignment="Center" Background="LightGreen" Margin="5" Visibility="Hidden" TextWrapping="Wrap" Text="Success !"/>
+            </StackPanel>
+            <TextBlock HorizontalAlignment="Left" Margin="5,0,0,5" TextWrapping="Wrap" Text="Header:" VerticalAlignment="Top"/>
+            <ListView x:Name="HeaderLV" Margin="5,0,0,0" HorizontalAlignment="Left" BorderThickness="1" BorderBrush="Black" Width="420" Height="110"/>
+            <TextBlock Margin="5" Text="Data retrieved from table created in DB:" />
+            <StackPanel Orientation="Horizontal">
+                <DataGrid ItemsSource="{Binding Record}" Margin="5" ScrollViewer.CanContentScroll="True" Name="GeneratedTable" MaxHeight="300" CanUserSortColumns="false" >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding Path=Xref}"  Header="Xref" IsReadOnly="True"/>
+                        <DataGridTextColumn Binding="{Binding Path=Yref}"  Header="Yref" IsReadOnly="True"/>
+                        <DataGridTextColumn Binding="{Binding Path=Date}"  Header="Date" IsReadOnly="True"/>
+                        <DataGridTextColumn Binding="{Binding Path=Value}"  Header="Value" IsReadOnly="True"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
 </Window>

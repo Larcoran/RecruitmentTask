@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JBATask", "JBATask\JBATask.csproj", "{0762CB88-E0A4-4524-81A6-EEE0B6EF96B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JBATaskCode", "JBATaskCode\JBATaskCode.csproj", "{D3DEF73C-AB8E-4CCB-AC8C-9C1185DC9BBE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0762CB88-E0A4-4524-81A6-EEE0B6EF96B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0762CB88-E0A4-4524-81A6-EEE0B6EF96B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0762CB88-E0A4-4524-81A6-EEE0B6EF96B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3DEF73C-AB8E-4CCB-AC8C-9C1185DC9BBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3DEF73C-AB8E-4CCB-AC8C-9C1185DC9BBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3DEF73C-AB8E-4CCB-AC8C-9C1185DC9BBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3DEF73C-AB8E-4CCB-AC8C-9C1185DC9BBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
